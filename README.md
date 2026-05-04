@@ -1,6 +1,7 @@
-# UAG 生存遊戲團體介紹網頁
+# UAG 制服系推廣俱樂部介紹網頁
 
-一個以「軍事風 / 迷彩暗色系」為主題的靜態介紹網頁,純 HTML / CSS / JS,可直接部署到 GitHub Pages。
+Uniform Airsoft Group (U.A.G) — 以「制服 + 沉浸式生存遊戲」為主題的俱樂部介紹網頁。
+純 HTML / CSS / JS,可直接部署到 GitHub Pages。
 
 ## 專案結構
 
@@ -12,7 +13,9 @@ UAG介紹網頁/
 ├── js/
 │   └── main.js             # 互動腳本(導覽、動畫、計數器)
 ├── assets/
-│   └── images/             # 放置圖片資源(成員照片、場地照等)
+│   └── images/             # 放置圖片資源
+│       ├── uag-flag.jpg    # ⚑ 俱樂部旗幟(Hero / Footer 使用)
+│       └── yuna.jpg        # 🎀 看板娘尤娜形象圖
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml      # GitHub Pages 自動部署
@@ -20,13 +23,25 @@ UAG介紹網頁/
 └── README.md
 ```
 
+## 必備圖片
+
+請在 `assets/images/` 放入下列兩張圖,網頁會自動顯示:
+
+| 檔名 | 用途 | 建議規格 |
+|---|---|---|
+| `uag-flag.jpg` | Hero 區頂部旗幟橫幅、Footer 小圖示 | 寬高比 16:9 ~ 2:1,寬度 800px+ |
+| `yuna.jpg` | 看板娘區塊主圖 | 直幅人物圖,3:4 比例 |
+
+> 沒有放圖也沒關係——網頁會自動顯示佔位符,提示你檔案路徑。
+
 ## 區塊總覽
 
-1. **Hero 首頁** — 大標題、團體口號、CTA 按鈕
-2. **關於 UAG** — 團體介紹文字 + 數字統計卡
-3. **活動時間軸** — 近期 / 過往活動,含日期、地點、標籤
-4. **核心成員** — 成員卡片網格,含角色、簡介、裝備標籤
-5. **加入我們** — Facebook / Discord / Instagram / Email 連結
+1. **Hero 首頁** — UAG 旗幟橫幅 + 大標題 + 俱樂部口號 + CTA 按鈕
+2. **關於 UAG (01)** — 制服系推廣俱樂部介紹 + 數字統計卡
+3. **看板娘 Yuna (02)** — 尤娜形象、命名由來、識別資訊
+4. **活動時間軸 (03)** — 沉浸主題場次紀錄(年代制服戰)
+5. **核心成員 (04)** — 社長 / 考據官 / 劇本官 / 紀錄官
+6. **加入我們 (05)** — Facebook 粉專 / 社團 / Instagram / Email
 
 ## 本地開發
 
@@ -106,16 +121,18 @@ git push -u origin main
 
 ### 調整配色
 
-在 `css/style.css` 最上方的 `:root` 區塊修改 CSS 變數:
+當前配色取自 **U.A.G 旗幟** 與 **看板娘 Yuna**:
 
-```css
-:root {
-    --color-accent: #6b8e23;        /* 主色(軍綠) */
-    --color-accent-bright: #9acd32; /* 亮色強調 */
-    --color-bg: #0d1117;            /* 背景 */
-    /* ... */
-}
-```
+| Token | Hex | 對應 |
+|---|---|---|
+| `--color-accent` | `#c0392b` | 旗幟深紅(主色) |
+| `--color-accent-bright` | `#e74c3c` | 鮮紅(hover/強調) |
+| `--color-accent-dark` | `#7c1d1d` | 暗酒紅(陰影層次) |
+| `--color-warm` | `#d4a574` | 卡其(尤娜防彈背心) |
+| `--color-gold` | `#f5b942` | 琥珀金(尤娜眼睛、包帶) |
+| `--color-bg` | `#0e0c0d` | 暖暗底色 |
+
+要調整配色請修改 `css/style.css` 最上方的 `:root` 區塊。
 
 ### 新增活動
 

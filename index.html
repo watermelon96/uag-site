@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UAG 生存遊戲團體 - 戰術、熱血、團隊">
-    <title>UAG | 生存遊戲團體</title>
+    <meta name="description" content="UAG 制服系推廣俱樂部 - 穿著制服、沉浸式生存遊戲、年代軍裝角色扮演">
+    <title>UAG | 制服系推廣俱樂部</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,7 @@
             <nav class="nav-links" id="navLinks">
                 <a href="#home">首頁</a>
                 <a href="#about">關於我們</a>
+                <a href="#mascot">看板娘</a>
                 <a href="#events">活動</a>
                 <a href="#members">成員</a>
                 <a href="#contact">加入我們</a>
@@ -35,16 +36,25 @@
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <p class="hero-tag">// TACTICAL · TEAMWORK · ADRENALINE</p>
+            <div class="hero-flag">
+                <img src="assets/images/uag-flag.jpg" alt="U.A.G - Uniform Airsoft Group 旗幟"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="flag-placeholder" style="display:none;">
+                    <span>UAG FLAG</span>
+                    <small>請將 uag-flag.jpg 放到 assets/images/</small>
+                </div>
+            </div>
+            <p class="hero-tag">// UNIFORM · IMMERSION · ROLEPLAY</p>
             <h1 class="hero-title">
-                UNITED <span class="accent">AIRSOFT</span> GROUP
+                UNIFORM <span class="accent">AIRSOFT</span> GROUP
             </h1>
             <p class="hero-subtitle">
-                我們是一群熱愛生存遊戲的夥伴,以紀律、戰術與默契為核心,在戰場上並肩作戰。
+                制服系推廣俱樂部。穿上你喜歡的軍服,扮演屬於你的角色——
+                我們追求的不只是輸贏,而是沉浸式的年代還原與戰場儀式感。
             </p>
             <div class="hero-cta">
                 <a href="#events" class="btn btn-primary">查看近期活動</a>
-                <a href="#contact" class="btn btn-outline">加入我們</a>
+                <a href="#contact" class="btn btn-outline">加入俱樂部</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -59,35 +69,90 @@
             <div class="section-header">
                 <span class="section-num">01</span>
                 <h2 class="section-title">關於 UAG</h2>
-                <p class="section-desc">戰友、熱血、信念</p>
+                <p class="section-desc">制服 · 沉浸 · 同好</p>
             </div>
             <div class="about-grid">
                 <div class="about-text">
                     <h3>我們是誰</h3>
                     <p>
-                        UAG(United Airsoft Group)成立於 202X 年,由一群熱愛 Airsoft 生存遊戲的夥伴組成。
-                        我們定期舉辦戰術訓練、劇本 CQB、野戰對抗等活動,歡迎新手與老手一同加入。
+                        歡迎進入<strong>制服系推廣俱樂部</strong>!UAG 是一群以「制服」為核心的生存遊戲同好社團,
+                        我們著重於推廣穿著制服以及沉浸式的生存遊戲玩法——穿上你喜歡的軍服,好好扮演屬於自己的角色。
                     </p>
                     <p>
-                        團隊強調安全、紀律與團隊合作。我們相信,生存遊戲不只是扣扳機,更是戰術思考與團隊默契的展現。
+                        從二戰到現代,從各國陸軍到特種部隊,我們尊重每一套制服背後的時代與故事。
+                        不定期會在特殊節日舉辦主題活動,並且定期分享活動照片與裝備考據,歡迎各位同好踴躍參加。
                     </p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <span class="stat-num" data-target="50">0</span>
-                        <span class="stat-label">現役成員</span>
+                        <span class="stat-num" data-target="80">0</span>
+                        <span class="stat-label">俱樂部成員</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-num" data-target="120">0</span>
-                        <span class="stat-label">累計場次</span>
+                        <span class="stat-num" data-target="60">0</span>
+                        <span class="stat-label">主題活動場次</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-num" data-target="8">0</span>
-                        <span class="stat-label">常駐場地</span>
+                        <span class="stat-num" data-target="15">0</span>
+                        <span class="stat-label">收藏制服年代</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-num" data-target="24">0</span>
-                        <span class="stat-label">每月活動</span>
+                        <span class="stat-num" data-target="2000">0</span>
+                        <span class="stat-label">分享照片</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 看板娘介紹 ============ -->
+    <section id="mascot" class="section section-mascot">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2 class="section-title">看板娘 · Yuna</h2>
+                <p class="section-desc">Our Official Mascot · 制服系首位看板娘</p>
+            </div>
+            <div class="mascot-grid">
+                <div class="mascot-photo">
+                    <div class="mascot-bg-deco"></div>
+                    <img src="assets/images/yuna.jpg" alt="尤娜 Yuna - 制服系推廣俱樂部看板娘"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <div class="mascot-placeholder" style="display:none;">
+                        <span class="placeholder-icon">🎀</span>
+                        <span class="placeholder-text">將 yuna.jpg 放至<br>assets/images/</span>
+                    </div>
+                </div>
+                <div class="mascot-info">
+                    <span class="mascot-tag">// MEET OUR MASCOT</span>
+                    <h3 class="mascot-name">
+                        尤娜 <span class="mascot-name-en">Yuna</span>
+                    </h3>
+                    <p class="mascot-quote">
+                        「制服系首位看板娘誕生啦!」
+                    </p>
+                    <p class="mascot-bio">
+                        她的名字 <strong>尤娜(Yuna)</strong> 取自 <strong>Uniform</strong> 的前段發音,
+                        代表我們「制服系」的精神象徵。今後也會有許多尤娜的周邊商品與創作,
+                        歡迎各位繼續支持這位剛誕生的看板娘。
+                    </p>
+                    <div class="mascot-traits">
+                        <div class="trait">
+                            <span class="trait-label">名字由來</span>
+                            <span class="trait-value">Uniform → 尤娜</span>
+                        </div>
+                        <div class="trait">
+                            <span class="trait-label">識別配色</span>
+                            <span class="trait-value">紅色 / 卡其</span>
+                        </div>
+                        <div class="trait">
+                            <span class="trait-label">徽章</span>
+                            <span class="trait-value">U.A.G</span>
+                        </div>
+                        <div class="trait">
+                            <span class="trait-label">身份</span>
+                            <span class="trait-value">俱樂部象徵</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,9 +163,9 @@
     <section id="events" class="section section-events">
         <div class="container">
             <div class="section-header">
-                <span class="section-num">02</span>
+                <span class="section-num">03</span>
                 <h2 class="section-title">活動時間軸</h2>
-                <p class="section-desc">Mission Logs · 近期行動紀錄</p>
+                <p class="section-desc">Mission Logs · 沉浸主題場次紀錄</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
@@ -108,10 +173,10 @@
                     <div class="timeline-date">2026 / 05 / 10</div>
                     <div class="timeline-card">
                         <span class="badge badge-upcoming">UPCOMING</span>
-                        <h3>山隘劇本戰 — 補給線爭奪</h3>
-                        <p>大型劇本對抗,分紅藍兩隊進行 6 小時補給爭奪。名額限定 40 人。</p>
+                        <h3>母親節主題場 — 越戰沉浸劇本</h3>
+                        <p>越戰年代主題沉浸場,需穿著美軍 OG-107 / ERDL 或 NVA / VC 制服參與。劇本融入巡邏、伏擊與撤離橋段。</p>
                         <div class="timeline-meta">
-                            <span>📍 桃園戰術場</span>
+                            <span>📍 桃園山區戰術場</span>
                             <span>🕐 09:00 - 17:00</span>
                         </div>
                     </div>
@@ -121,11 +186,11 @@
                     <div class="timeline-date">2026 / 04 / 15</div>
                     <div class="timeline-card">
                         <span class="badge badge-done">COMPLETED</span>
-                        <h3>CQB 室內訓練日</h3>
-                        <p>近距離戰鬥訓練、破門與清房流程演練,共 18 人參加。</p>
+                        <h3>春季制服聚會 — 二戰歐戰主題</h3>
+                        <p>美軍 M1943 對德軍 M40 / M42 ,著重制服考據、徽章配置與年代裝備還原,共 24 位同好參與。</p>
                         <div class="timeline-meta">
-                            <span>📍 新北 CQB 場</span>
-                            <span>🕐 14:00 - 21:00</span>
+                            <span>📍 新北野戰場</span>
+                            <span>🕐 10:00 - 18:00</span>
                         </div>
                     </div>
                 </div>
@@ -134,11 +199,11 @@
                     <div class="timeline-date">2026 / 03 / 22</div>
                     <div class="timeline-card">
                         <span class="badge badge-done">COMPLETED</span>
-                        <h3>新手招募日</h3>
-                        <p>針對新手舉辦的安全講習與基礎戰術教學,全日實戰演練。</p>
+                        <h3>新人見面會 — 軍裝入門講座</h3>
+                        <p>針對新加入的同好舉辦,講解年代軍服基礎分類、入門購置建議與 CQB 安全規範。</p>
                         <div class="timeline-meta">
-                            <span>📍 宜蘭野戰場</span>
-                            <span>🕐 10:00 - 18:00</span>
+                            <span>📍 台北 CQB 場</span>
+                            <span>🕐 14:00 - 20:00</span>
                         </div>
                     </div>
                 </div>
@@ -147,8 +212,8 @@
                     <div class="timeline-date">2026 / 02 / 08</div>
                     <div class="timeline-card">
                         <span class="badge badge-done">COMPLETED</span>
-                        <h3>冬季野戰對抗賽</h3>
-                        <p>年度冬季大賽,32 人分隊對抗,最終由藍隊奪冠。</p>
+                        <h3>新春主題場 — 現代特戰沉浸戰</h3>
+                        <p>以現代多國特種部隊制服為主軸,Multicam / AOR / 三色沙漠等迷彩混戰,共 32 位同好參與。</p>
                         <div class="timeline-meta">
                             <span>📍 苗栗野戰場</span>
                             <span>🕐 08:00 - 17:00</span>
@@ -163,9 +228,9 @@
     <section id="members" class="section section-members">
         <div class="container">
             <div class="section-header">
-                <span class="section-num">03</span>
+                <span class="section-num">04</span>
                 <h2 class="section-title">核心成員</h2>
-                <p class="section-desc">The Squad · 我們的戰友</p>
+                <p class="section-desc">The Squad · 各領域的制服同好</p>
             </div>
             <div class="members-grid">
                 <article class="member-card">
@@ -173,12 +238,12 @@
                         <div class="photo-placeholder">👤</div>
                     </div>
                     <div class="member-info">
-                        <span class="member-role">指揮官 / COMMANDER</span>
+                        <span class="member-role">社長 / FOUNDER</span>
                         <h3 class="member-name">Alpha</h3>
-                        <p class="member-bio">戰術規劃、活動統籌。擅長劇本設計與團隊指揮。</p>
+                        <p class="member-bio">俱樂部創辦人,負責活動統籌與主題規劃。專精現代美軍裝備考據。</p>
                         <div class="member-gear">
-                            <span>M4A1</span>
-                            <span>Glock 17</span>
+                            <span>現代美軍</span>
+                            <span>Multicam</span>
                         </div>
                     </div>
                 </article>
@@ -187,12 +252,12 @@
                         <div class="photo-placeholder">👤</div>
                     </div>
                     <div class="member-info">
-                        <span class="member-role">狙擊手 / SNIPER</span>
+                        <span class="member-role">考據官 / HISTORIAN</span>
                         <h3 class="member-name">Bravo</h3>
-                        <p class="member-bio">遠距離支援,偵察與情報回報專家。</p>
+                        <p class="member-bio">二戰年代軍服考據專家,熟悉徽章、配置與時期細節。</p>
                         <div class="member-gear">
-                            <span>VSR-10</span>
-                            <span>M1911</span>
+                            <span>WWII 美軍</span>
+                            <span>WWII 德軍</span>
                         </div>
                     </div>
                 </article>
@@ -201,12 +266,12 @@
                         <div class="photo-placeholder">👤</div>
                     </div>
                     <div class="member-info">
-                        <span class="member-role">突擊手 / ASSAULT</span>
+                        <span class="member-role">劇本官 / SCENARIO</span>
                         <h3 class="member-name">Charlie</h3>
-                        <p class="member-bio">前線突破,CQB 室內作戰主力。</p>
+                        <p class="member-bio">沉浸式劇本設計,擅長越戰、冷戰時期主題場景還原。</p>
                         <div class="member-gear">
-                            <span>MP7</span>
-                            <span>G18</span>
+                            <span>越戰美軍</span>
+                            <span>NVA / VC</span>
                         </div>
                     </div>
                 </article>
@@ -215,12 +280,12 @@
                         <div class="photo-placeholder">👤</div>
                     </div>
                     <div class="member-info">
-                        <span class="member-role">醫療兵 / MEDIC</span>
+                        <span class="member-role">紀錄官 / PHOTOGRAPHER</span>
                         <h3 class="member-name">Delta</h3>
-                        <p class="member-bio">救援與補給,戰場急救訓練認證。</p>
+                        <p class="member-bio">活動攝影與影像紀錄,將每一場制服聚會保存成有溫度的回憶。</p>
                         <div class="member-gear">
-                            <span>HK416</span>
-                            <span>P226</span>
+                            <span>活動攝影</span>
+                            <span>影像剪輯</span>
                         </div>
                     </div>
                 </article>
@@ -232,33 +297,33 @@
     <section id="contact" class="section section-contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-num">04</span>
+                <span class="section-num">05</span>
                 <h2 class="section-title">加入我們</h2>
-                <p class="section-desc">Ready to deploy? 加入戰場</p>
+                <p class="section-desc">穿上你的軍服,加入俱樂部</p>
             </div>
             <div class="contact-grid">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="contact-card">
+                <a href="https://www.facebook.com/profile.php?id=100089371982612" target="_blank" rel="noopener" class="contact-card">
                     <div class="contact-icon">f</div>
-                    <h3>Facebook</h3>
-                    <p>追蹤粉絲專頁,掌握最新活動資訊</p>
+                    <h3>Facebook 粉絲專頁</h3>
+                    <p>追蹤主頁,掌握最新主題場與分享照片</p>
                     <span class="contact-link">前往 →</span>
                 </a>
-                <a href="https://discord.com/" target="_blank" rel="noopener" class="contact-card">
-                    <div class="contact-icon">💬</div>
-                    <h3>Discord</h3>
-                    <p>加入我們的伺服器,與戰友交流</p>
+                <a href="https://www.facebook.com/groups/812452749417427/" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-icon">👥</div>
+                    <h3>Facebook 社團</h3>
+                    <p>加入制服系推廣俱樂部,與同好直接交流</p>
                     <span class="contact-link">加入 →</span>
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="contact-card">
                     <div class="contact-icon">IG</div>
                     <h3>Instagram</h3>
-                    <p>觀看活動精彩照片與幕後花絮</p>
+                    <p>觀看活動精彩照片與制服考據紀錄</p>
                     <span class="contact-link">追蹤 →</span>
                 </a>
                 <a href="mailto:contact@example.com" class="contact-card">
                     <div class="contact-icon">@</div>
                     <h3>Email</h3>
-                    <p>合作邀約、場地洽詢請來信</p>
+                    <p>合作邀約、場地洽詢、媒體聯繫請來信</p>
                     <span class="contact-link">寄信 →</span>
                 </a>
             </div>
@@ -269,11 +334,14 @@
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <span class="logo-mark">◆</span>
+                <img src="assets/images/uag-flag.jpg" alt="UAG"
+                     class="footer-flag"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block';">
+                <span class="logo-mark" style="display:none;">◆</span>
                 <span class="logo-text">UAG</span>
             </div>
-            <p class="footer-copy">&copy; <span id="year"></span> United Airsoft Group. All rights reserved.</p>
-            <p class="footer-tag">Built with ♥ for the squad.</p>
+            <p class="footer-copy">&copy; <span id="year"></span> Uniform Airsoft Group · 制服系推廣俱樂部. All rights reserved.</p>
+            <p class="footer-tag">Built with ♥ for uniform lovers.</p>
         </div>
     </footer>
 

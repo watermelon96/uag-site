@@ -1,27 +1,31 @@
 /* ========================================
-   UAG 生存遊戲團體 - 主樣式表
-   軍事風 / 迷彩暗色系
+   UAG 制服系推廣俱樂部 - 主樣式表
+   旗幟紅 / 尤娜配色 / 暗色系
    ======================================== */
 
 /* ---------- CSS Variables ---------- */
 :root {
-    /* Colors - Military Dark Theme */
-    --color-bg: #0d1117;
-    --color-bg-alt: #161b22;
-    --color-bg-card: #1c2128;
-    --color-border: #30363d;
-    --color-text: #c9d1d9;
-    --color-text-dim: #8b949e;
-    --color-text-bright: #f0f6fc;
+    /* Colors - Warm Dark Theme(基底略偏暖) */
+    --color-bg: #0e0c0d;
+    --color-bg-alt: #18141a;
+    --color-bg-card: #1f1a1c;
+    --color-border: #3d2e30;
+    --color-text: #e6dad6;
+    --color-text-dim: #a89490;
+    --color-text-bright: #fff8f5;
 
-    /* Accent - Military Green */
-    --color-accent: #6b8e23;
-    --color-accent-bright: #9acd32;
-    --color-accent-dark: #4a5d18;
+    /* Accent - 旗幟深紅(主色) */
+    --color-accent: #c0392b;
+    --color-accent-bright: #e74c3c;
+    --color-accent-dark: #7c1d1d;
 
-    /* Danger / Highlight */
+    /* Yuna 暖色點綴 */
+    --color-warm: #d4a574;     /* 卡其 / 防彈背心 */
+    --color-gold: #f5b942;     /* 琥珀金 / 眼睛、包帶 */
+
+    /* Danger / Warning(沿用,使視覺更一致) */
     --color-danger: #e74c3c;
-    --color-warning: #f39c12;
+    --color-warning: #f5b942;
 
     /* Typography */
     --font-display: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -54,15 +58,15 @@ body {
     overflow-x: hidden;
 }
 
-/* 迷彩紋理背景 */
+/* 暗色暖光暈背景 */
 body::before {
     content: '';
     position: fixed;
     inset: 0;
     background-image:
-        radial-gradient(circle at 20% 30%, rgba(107, 142, 35, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(107, 142, 35, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(74, 93, 24, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(192, 57, 43, 0.10) 0%, transparent 42%),
+        radial-gradient(circle at 80% 70%, rgba(212, 165, 116, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(124, 29, 29, 0.04) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -192,6 +196,7 @@ button {
     justify-content: center;
     overflow: hidden;
     padding-top: var(--nav-height);
+    padding-bottom: 110px; /* 預留 SCROLL 指示空間,避免與 CTA 重疊 */
 }
 
 .hero::before {
@@ -199,7 +204,7 @@ button {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(135deg, #0d1117 0%, #1a2419 50%, #0d1117 100%);
+        linear-gradient(135deg, #0e0c0d 0%, #2a1416 50%, #0e0c0d 100%);
     z-index: 0;
 }
 
@@ -211,8 +216,8 @@ button {
             45deg,
             transparent,
             transparent 2px,
-            rgba(107, 142, 35, 0.03) 2px,
-            rgba(107, 142, 35, 0.03) 4px
+            rgba(192, 57, 43, 0.04) 2px,
+            rgba(192, 57, 43, 0.04) 4px
         );
     z-index: 1;
 }
@@ -294,9 +299,9 @@ button {
 .btn-primary:hover {
     background: var(--color-accent-bright);
     border-color: var(--color-accent-bright);
-    color: var(--color-bg);
+    color: var(--color-text-bright);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(154, 205, 50, 0.3);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.35);
 }
 
 .btn-outline {
@@ -314,7 +319,7 @@ button {
 /* ---------- Hero Scroll ---------- */
 .hero-scroll {
     position: absolute;
-    bottom: 32px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -326,6 +331,14 @@ button {
     font-size: 0.75rem;
     letter-spacing: 0.3em;
     z-index: 2;
+    pointer-events: none; /* 不擋按鈕點擊 */
+}
+
+/* 螢幕高度不足時自動隱藏 SCROLL,避免與 CTA 重疊 */
+@media (max-height: 760px), (max-width: 600px) {
+    .hero-scroll {
+        display: none;
+    }
 }
 
 .scroll-line {
@@ -371,7 +384,7 @@ button {
     display: block;
     font-family: var(--font-display);
     font-size: 0.9rem;
-    color: var(--color-accent-bright);
+    color: var(--color-gold);
     letter-spacing: 0.3em;
     margin-bottom: 12px;
 }
@@ -456,7 +469,7 @@ button {
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--color-accent-bright);
+    color: var(--color-gold);
     margin-bottom: 8px;
 }
 
@@ -555,8 +568,8 @@ button {
 }
 
 .badge-upcoming {
-    background: var(--color-accent-bright);
-    color: var(--color-bg);
+    background: var(--color-gold);
+    color: #1a0e0e;
 }
 
 .badge-done {
@@ -604,7 +617,7 @@ button {
 
 .member-photo {
     aspect-ratio: 1;
-    background: linear-gradient(135deg, #2d3e1f 0%, #1a2419 100%);
+    background: linear-gradient(135deg, #3a1d1d 0%, #1a1416 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -842,5 +855,307 @@ button {
     .btn {
         width: 100%;
         text-align: center;
+    }
+}
+
+/* ========================================
+   看板娘 Yuna 區塊
+   ======================================== */
+
+.section-mascot {
+    background: linear-gradient(180deg,
+        var(--color-bg) 0%,
+        var(--color-bg-alt) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-mascot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(135deg, transparent 0%, transparent 60%, rgba(231, 76, 60, 0.04) 60%, rgba(231, 76, 60, 0.04) 65%, transparent 65%),
+        radial-gradient(circle at 90% 10%, rgba(231, 76, 60, 0.10) 0%, transparent 35%),
+        radial-gradient(circle at 10% 90%, rgba(231, 76, 60, 0.06) 0%, transparent 30%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section-mascot .container {
+    position: relative;
+    z-index: 1;
+}
+
+.mascot-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 1.2fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* 圖片區塊 */
+.mascot-photo {
+    position: relative;
+    border-radius: 4px;
+    overflow: visible;
+    aspect-ratio: 3 / 4;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.mascot-bg-deco {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    right: 12%;
+    bottom: 12%;
+    background: linear-gradient(135deg, var(--color-danger) 0%, #c0392b 100%);
+    z-index: 0;
+    border-radius: 2px;
+    transform: rotate(-1deg);
+}
+
+.mascot-bg-deco::before,
+.mascot-bg-deco::after {
+    content: '';
+    position: absolute;
+    background: var(--color-danger);
+    opacity: 0.6;
+    border-radius: 2px;
+}
+
+.mascot-bg-deco::before {
+    width: 40px;
+    height: 40px;
+    top: -30px;
+    left: -40px;
+}
+
+.mascot-bg-deco::after {
+    width: 24px;
+    height: 24px;
+    bottom: -20px;
+    right: -30px;
+}
+
+.mascot-photo img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.5));
+}
+
+.mascot-placeholder {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-card);
+    border: 2px dashed var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    color: var(--color-text-dim);
+}
+
+.mascot-placeholder .placeholder-icon {
+    font-size: 64px;
+}
+
+.mascot-placeholder .placeholder-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 文字區塊 */
+.mascot-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mascot-tag {
+    font-family: var(--font-display);
+    color: var(--color-danger);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mascot-name {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 64px);
+    color: var(--color-text-bright);
+    line-height: 1;
+    font-weight: 700;
+}
+
+.mascot-name-en {
+    color: var(--color-danger);
+    font-style: italic;
+}
+
+.mascot-quote {
+    font-size: 18px;
+    color: var(--color-text-bright);
+    border-left: 3px solid var(--color-danger);
+    padding-left: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.mascot-bio {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.8;
+}
+
+.mascot-bio strong {
+    color: var(--color-danger);
+    font-weight: 700;
+}
+
+.mascot-traits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.trait {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-danger);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.trait:hover {
+    border-left-color: var(--color-gold);
+    transform: translateX(2px);
+}
+
+.trait-label {
+    font-size: 11px;
+    color: var(--color-text-dim);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+}
+
+.trait-value {
+    font-size: 15px;
+    color: var(--color-text-bright);
+    font-weight: 700;
+}
+
+/* 響應式 */
+@media (max-width: 900px) {
+    .mascot-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mascot-photo {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mascot-traits {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   Hero 旗幟 / Footer 旗幟
+   ======================================== */
+
+.hero-flag {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto 28px;
+    position: relative;
+    z-index: 2;
+    animation: flagFadeIn 0.9s ease-out 0.1s both;
+}
+
+.hero-flag img {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 0 0 1px rgba(231, 76, 60, 0.4),
+        0 16px 48px rgba(0, 0, 0, 0.6),
+        0 4px 12px rgba(231, 76, 60, 0.2);
+    display: block;
+}
+
+.flag-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(180deg,
+        var(--color-danger) 0%, var(--color-danger) 18%,
+        #fff 18%, #fff 82%,
+        var(--color-danger) 82%, var(--color-danger) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+.flag-placeholder span {
+    font-size: clamp(28px, 5vw, 48px);
+}
+
+.flag-placeholder small {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    color: #555;
+    font-weight: 400;
+}
+
+@keyframes flagFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer 小旗幟 */
+.footer-flag {
+    width: 56px;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+@media (max-width: 600px) {
+    .hero-flag {
+        max-width: 360px;
+        margin-bottom: 20px;
     }
 }
